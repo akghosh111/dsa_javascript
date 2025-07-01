@@ -32,6 +32,19 @@ class CustomArray {
         this.length --;
         return firstItem;
     }
+
+    delete(index) {
+        const item = this.data[index];
+
+        for (let i = index; i<this.length-1; i++) {
+            this.data[i] = this.data[i+1];
+        }
+
+        delete this.data[this.length-1];
+        this.length--;
+
+        return item;
+    }
 }
 
 
@@ -43,5 +56,6 @@ newArray.push("two");
 newArray.push("three");
 // newArray.pop();
 // console.log(newArray.get(0));
-newArray.shift();
+// newArray.shift();
+newArray.delete(1);
 console.log(newArray);
