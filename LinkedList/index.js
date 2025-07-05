@@ -12,6 +12,13 @@ class LinkedList {
 
         this.length = 1;
     }
+
+    push(value) {
+        let newNode = new Node(value);
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.length++;
+    }
 }
 
 const myLinkedList = new LinkedList(1);
