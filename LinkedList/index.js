@@ -69,6 +69,28 @@ class LinkedList {
         return this;
     }
 
+    shift() {
+        if(!this.head) {
+            return undefined;
+        }
+
+        //1. Point the first node
+        let temp = this.head;
+
+        //2 Move the head to the next node
+        this.head = this.head.next
+
+        //3 Remove the first node
+        temp.next = null;
+        this.length--;
+
+        if(this.length ===0) {
+            this.tail = null;
+        }
+        
+        return temp;
+    }
+
     //this shift method is actually for doubly linkedlist
 
     // shift() {
