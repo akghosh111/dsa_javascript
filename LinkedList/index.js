@@ -69,28 +69,28 @@ class LinkedList {
         return this;
     }
 
+    //this shift method is actually for doubly linkedlist
 
+    // shift() {
 
-    shift() {
+    //     if(this.length ===0) {
+    //         return undefined;
+    //     }
 
-        if(this.length ===0) {
-            return undefined;
-        }
-        
-        let temp = this.head;
+    //     let temp = this.head;
 
-        if(this.length ===1) {
-            this.head = null;
-            this.tail = null;
-        }
+    //     if(this.length ===1) {
+    //         this.head = null;
+    //         this.tail = null;
+    //     }
 
-        this.head = this.head.next;
-        this.head.prev = null;
-        temp.next = null;
-        this.length--;
+    //     this.head = this.head.next;
+    //     this.head.prev = null;
+    //     temp.next = null;
+    //     this.length--;
 
-        return temp;
-    }
+    //     return temp;
+    // }
 }
 
 
