@@ -87,7 +87,7 @@ class LinkedList {
         if(this.length ===0) {
             this.tail = null;
         }
-        
+
         return temp;
     }
 
@@ -113,6 +113,11 @@ class LinkedList {
 
     //     return temp;
     // }
+
+
+    getFirst() {
+        return this.head;
+    }
 }
 
 
@@ -121,7 +126,7 @@ myLinkedList.push(10);
 myLinkedList.push(20);
 myLinkedList.push(30);
 myLinkedList.push(40);
-myLinkedList.shift();
+// myLinkedList.shift();
 // myLinkedList.unshift(20);
 // myLinkedList.pop();
-console.log(myLinkedList);
+console.log(myLinkedList.getFirst());
