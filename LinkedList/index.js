@@ -118,6 +118,23 @@ class LinkedList {
     getFirst() {
         return this.head;
     }
+
+
+    getLast() {
+        if(!this.head) {
+            return null;
+        }
+
+        let temp = this.head;
+
+        while(temp) {
+            if(!temp.next){
+                return temp;
+            }
+
+            temp = temp.next;
+        }
+    }
 }
 
 
@@ -129,4 +146,4 @@ myLinkedList.push(40);
 // myLinkedList.shift();
 // myLinkedList.unshift(20);
 // myLinkedList.pop();
-console.log(myLinkedList.getFirst());
+console.log(myLinkedList.getLast());
