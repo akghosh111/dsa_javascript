@@ -135,6 +135,22 @@ class LinkedList {
             temp = temp.next;
         }
     }
+
+    get(index) {
+        let counter = 0;
+        let temp = this.head;
+
+        while (temp) {
+
+            if(counter === index) {
+                return temp;
+            }
+            counter++;
+            temp = temp.next;
+
+        }
+        return null;
+    }
 }
 
 
@@ -146,4 +162,4 @@ myLinkedList.push(40);
 // myLinkedList.shift();
 // myLinkedList.unshift(20);
 // myLinkedList.pop();
-console.log(myLinkedList.getLast());
+console.log(myLinkedList.get(2));
