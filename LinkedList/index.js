@@ -151,6 +151,19 @@ class LinkedList {
         }
         return null;
     }
+
+
+
+    set(index, value) {
+        let temp = this.get(index);
+
+        if(temp) {
+            temp.value = value;
+            return true;
+        }
+
+        return false;
+    }
 }
 
 
@@ -159,7 +172,9 @@ myLinkedList.push(10);
 myLinkedList.push(20);
 myLinkedList.push(30);
 myLinkedList.push(40);
+
+console.log(myLinkedList.set(3, 10));
 // myLinkedList.shift();
 // myLinkedList.unshift(20);
 // myLinkedList.pop();
-console.log(myLinkedList.get(2));
+// console.log(myLinkedList.get(2));
